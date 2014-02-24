@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>App16</title>
+
+    <!-- Références App16 -->
+    <link href="css/default.css" rel="stylesheet" />
+    <link href="css/buttons.css" rel="stylesheet" />
+</head>
+<body>
+    <div style="margin:5px;">
+        <button id="ShowHistory" class="button button-rounded button-flat-primary">History</button>
+        <div id="Messages">
+        </div>
+    </div>
+        <div id="first">
+            <center>
+            <div id="cont">
+                <table><tr>
+                    
+                    <td>
+                        <input type="password" id="CodeGroupe" placeholder="Enter or create the code (Secret one!)" />
+                        
+                    </td>
+                    <td>
+                        <button id="submit0" class="button button-rounded button-flat">Submit</button>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td><select style="display:none" id='userch'>
+                        </select>
+                    </td>
+                    <td>
+                    <button id="userchBtn" class="button button-rounded button-flat-primary" style="display:none" >this's me!</button>
+                    </td>
+                </tr>
+
+                    <tr>
+                        <td>
+                            
+                        <input style="display:none" type="text" id="username" placeholder="You are new? enter your name"/>
+                        </td>
+                        <td>
+                        <button style="display:none" id="submit" class="button button-rounded button-flat">Submit</button>
+
+                        </td>
+                    </tr>
+
+
+
+                </table>
+                
+               
+                <br />
+                <p>*The code is shared between members of one conversation</p>
+            </div>
+            </center>
+        </div>
+        
+        
+        <div id="load">
+            <h1>Preparing the room...</h1>
+        </div>
+
+	<div style="min-width:1400px">
+        <img src="images/logo.png" id="logo"/>
+        <div id="Bubbles">
+            <div id="0" class="bubble">
+                <div id="name0" class="name">
+                    Empty place
+                </div>
+
+                <ul id="List0" class="list">
+                </ul>
+            
+            </div>
+            <div id="1" class="bubble">
+                <div id="name1" class="name">
+                    Empty place
+                </div>
+
+                <ul id="List1" class="list">
+                </ul>
+            </div>
+            <div id="2" class="bubble"> 
+                <div id="name2" class="name">
+                    Empty place
+                </div>
+
+
+                <ul id="List2" class="list">
+                </ul>
+            </div>
+            <div id="3" class="bubble">
+                <div id="name3" class="name">
+                    Empty place
+                </div>
+
+                <ul id="List3" class="list">
+                </ul>
+            </div>
+            <div id="4" class="bubble">
+                <div id="name4" class="name">
+                    Empty place
+                </div>
+
+                <ul id="List4" class="list">
+                </ul>
+            </div>
+            <div id="5" class="bubble">
+                <div id="name5" class="name">
+                    Empty place
+                </div>
+
+                <ul id="List5" class="list">
+                </ul>
+            </div>
+            <div id="6" class="bubble">
+                <div id="name6" class="name">
+                    Empty place
+                </div>
+
+                <ul id="List6" class="list">
+                </ul>
+            </div>
+        </div>
+        <div id="input">
+            <div id="CanvasControls">
+				<h2 id="sandc">Size and Color</h2><br>
+                <section id="addToDo" style="display:none">
+                    <h2>Add a ToDo item</h2>
+                    <input type="text" id="titleToDo" placeholder="ToDo title" /><br>
+                    <input type="text" id="dateToDo" placeholder="ToDo date" /><br>
+                    <textarea id="discToDo" placeholder="Discreption"></textarea><br>
+                    <button id="addToDoBtn" class="button button-rounded button-flat-action">Add this</button>
+                </section>
+                <section id="sizes">
+                    <div class="rad" id="r2" style="width:10px;height:10px"></div>
+                    <div class="rad" id="r6" style="width:20px;height:20px"></div>
+                    <div class="rad" id="r10" style="width:30px;height:30px"></div>
+                    <div class="rad" id="r20"  style="width:40px;height:40px"></div>
+                </section>
+
+
+                <section id="colors">
+                    <div id="clr1" style="background:red"></div>
+                    <div id="clr2" style="background:green"></div>
+                    <div id="clr3" style="background:blue"></div>
+                    <div id="clr4" style="background:black"></div>
+                    <div id="clr5" style="background:white"></div>
+                </section>
+
+                <section>
+                    <br /><br /><br />
+                    <button id="clearCanvas" class="button button-rounded button-flat-primary">Clear this</button>
+                </section>
+                <br />
+                <section style="margin-bottom:10px;">
+					<td><button id="save" tabindex="99" class="button button-rounded button-flat-action">Save this&nbsp</button></td>
+                </section>
+            </div>
+			<div style="float:right; width: 1046px;">
+            <div id="shared">
+                <canvas id="canvas" width="954" height="400" style="background:#fff;"></canvas> <br />
+                <textarea id="textarea" style="width:954px;height:400px;padding:0;margin-top:-20px;display:none"></textarea>
+                <div id="timeLine" style="width:954px;height:400px;background:#fff;margin-top:-20px;display:none">
+                    
+                </div>
+			</div>
+                
+			<button style="margin-left:55px;" id="chDraw" class="button button-3d">Draw</button>
+            <button id="chText" class="button button-3d">Text</button>
+            <button id="chTimeLine" class="button button-3d">ToDo items</button>
+
+				<table id="table" style="float:right;padding:0 50px;"><tr id="tr" style="width:50%;">
+					<td style="text-align:left">
+					<input type="file" style="display:none" id="filePicker">
+					<button id="AddFile" class="button button-rounded button-caution">Select an image</button></td>
+					<td style="text-align:right"><input type="text" id="TextToSend" placeholder="Text To Send"/></td>
+					<td><button id="button" tabindex="99" class="button button-rounded button-flat-action">SEND</button></td>
+                    
+				</tr></table>
+			</div>
+
+        </div>
+    
+    
+    </div>
+    
+    <script src="js/FileSaver.js"></script>
+    <script src="js/Socket.js"></script>
+</body>
+</html>
